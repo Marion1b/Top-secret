@@ -1,0 +1,125 @@
+html {
+    font-size: 62.5%;;
+}
+body {
+    margin: 0;
+    background-color: black;
+    font-size: 1.8rem;
+
+}
+.free-container {
+    background: url("../assets/img/background.png") right;
+    background-size: cover;
+}
+.free-container p, .free-container h2{
+    margin: 0;
+}
+
+.free-aside-container aside {
+    border: 1px solid #ad7cba;
+    background-color: #fff;
+    width: 300px;
+    margin: auto;
+}
+.free aside input {
+    margin: 0;
+    width: 77%;
+    border: none;
+    line-height: 2;
+}
+.free aside button {
+    border: none;
+    background-color: #ff8559;
+    color: #fff;
+    width: 20%;
+    padding: 0.5em;
+    cursor: pointer;
+}
+.free .hide {
+    display: none;
+}
+/*******************************    Main    *******************************/
+.free main {
+    margin: 2rem auto;
+}
+.free section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.free article {
+    width: 60%;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.free section h1 {
+    font-size: 2.5rem;
+    background-color: #ad7cba;
+    color: #fff;
+    padding: 0.5em;
+    padding-left: 2em;
+    width: 100%;
+}
+.free section h2 {
+    background-color: #ff8559;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 2rem;
+
+    font-weight: normal;
+}
+.free-plus {
+    display: none;
+    position: absolute;
+    margin: 0;
+    inset: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    line-height: 10;
+}
+.free-illustration {
+    width: 100%;
+}
+.free-illustration img {
+    width: 100%;
+}
+@media screen and (min-width: 1200px) {
+    .free main {
+        width: 80vw;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .free-aside-container {
+        width: 80vw;
+        margin: auto;
+    }
+    .free-aside-container aside {
+        margin-right: 0;
+    }
+
+    .free article {
+        width: 25%;
+    }
+    .free section h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
+        
+    }
+    .free article:hover .free-plus {
+        display: block;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .free-plus {
+        line-height: 18;
+    }
+}
