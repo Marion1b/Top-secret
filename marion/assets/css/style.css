@@ -17,6 +17,8 @@ body{
 :root{
     --main-color : #0C1B32; 
     --main-color-transparent : hsla(216, 61%, 12%, 0.5);
+    --secondary-color:#BD92C9;
+    --third-color: #FF8559;
 }
 
 /* ==========================================================================
@@ -29,6 +31,7 @@ body{
     background: var(--main-color) url(../img/background.png) no-repeat;
     background-size: cover;
     background-position: top left;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* ==========================================================================
@@ -47,8 +50,8 @@ body{
 }
 
 .page-header img{
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
 }
 
@@ -65,14 +68,247 @@ body{
     display: none;
 }
 
-ul{
+.header-nav ul{
+    margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.header-i-container{
-    padding: .5rem;
-    border: solid #fff .2rem;
+.page-header i{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.header-nav-visible{
+    z-index: 10;
+    display: block;
+    background-color: var(--main-color);
+    position: absolute;
+    width:fit-content;
+    top: 7rem;
+    right: 0;
+    padding: 1rem;
+    text-align: right;
+}
+
+.header-nav-visible li{
+    padding: 1rem 1rem 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+/*****desktop version*****/
+
+@media screen and (min-width:1200px){
+    .page-header{
+        padding: 2rem 20rem;
+    }
+    .page-header img{
+        width: 15rem;
+        height: 15rem;
+    }
+    .burger{
+        display: none;
+    }
+    .header-nav{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 5rem;
+    }
+    .header-nav ul{
+        display: flex;
+        font-size: 2rem;
+    }
+    .header-nav ul li{
+        margin: auto 2rem;
+    }
+    .header-nav i{
+        font-size: 3rem;
+        padding: auto 3rem;
+    }
+}
+
+
+/* ==========================================================================
+  PAGE CONTACT
+  ========================================================================== */
+
+.main-contact{
+    margin: 5rem auto;
+}
+
+.main-contact h1{
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.contacter{
+    background-color: var(--main-color-transparent);
+    max-width: 90%;
+    margin: auto;
+    border-radius: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form-contacter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-contacter fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-contacter .field input, .form-contacter textarea{
+    border: .5rem solid var(--secondary-color);
+    width: 30rem;
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    color: #fff;
+}
+
+.form-contacter textarea{
+    padding-bottom: 5rem;
+}
+
+.form-contacter .field input:focus, .form-contacter textarea:focus{
+    outline: none;
+    border: #fff .6rem solid;
+}
+
+.contacter-button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    width: 30rem;
+    background-color: var(--third-color);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    color: #fff;
+    transition: transform 200ms ease-in;
+}
+
+.contacter-button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+/*****desktop version*****/
+@media screen and (min-width:1200px){
+    .main-contact{
+        margin: 10rem auto;
+    }
+    .contacter{
+        max-width: 1100px;
+    }
+    .form-contacter{
+        width: 70%;
+        margin: auto;
+    }
+    .form-contacter fieldset{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-contacter .field input{
+        width: 35rem;
+    }
+    .form-contacter > .field{
+        width: 100%;
+    }
+    .form-contacter .field input, .form-contacter textarea{
+        padding: 1.5rem;
+        margin: 3rem auto;
+    }
+    .form-contacter #entreprise, .form-contacter #message{
+        width: 100%;
+    }
+    .contacter-button{
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+  FOOTER
+  ========================================================================== */
+
+.page-footer{
+    background: var(--main-color-transparent);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+    align-items: center;
+}
+
+.page-footer img{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+}
+
+.page-footer p{
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.page-footer a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
     font-size: 1rem;
+}
+
+.page-footer i{
+    font-size: 2.5rem;
+}
+
+.page-footer article{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+/*****desktop version*****/
+@media screen and (min-width:1200px){
+    .page-footer{
+        padding: 2rem 20rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-footer article{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .page-footer img{
+        width: 75px;
+        height: 75px;
+    }
+    .page-footer p, .page-footer i{
+        margin: 1rem;
+    }
+    .page-footer a{
+        font-size: 1.4rem;
+    }
+    .page-footer i{
+        font-size: 3rem;
+    }
 }
