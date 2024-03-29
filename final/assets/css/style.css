@@ -1,0 +1,444 @@
+/* ==========================================================================
+  TOOLS
+  ========================================================================== */
+
+  *{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+:root{
+    --main-color : #0C1B32; 
+    --main-color-transparent : hsla(216, 61%, 12%, 0.5);
+    --secondary-color:#BD92C9;
+    --third-color: #FF8559;
+}
+
+/* ==========================================================================
+  GENERALITIES
+  ========================================================================== */
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--main-color) url(../img/background.png) no-repeat;
+    background-size: cover;
+    background-position: top left;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ==========================================================================
+  HEADER
+  ========================================================================== */
+.page-header{
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--main-color-transparent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.burger span{
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    padding: .1rem;
+    margin: .5rem;
+    background-color: #fff;
+}
+
+.header-nav{
+    display: none;
+}
+
+.header-nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.page-header i{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.header-nav-visible{
+    z-index: 10;
+    display: block;
+    background-color: var(--main-color);
+    position: absolute;
+    width:fit-content;
+    top: 7rem;
+    right: 0;
+    padding: 1rem;
+    text-align: right;
+}
+
+.header-nav-visible li{
+    padding: 1rem 1rem 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+/*****desktop version*****/
+
+@media screen and (min-width:1200px){
+    .page-header{
+        padding: 2rem 20rem;
+    }
+    .page-header img{
+        width: 15rem;
+        height: 15rem;
+    }
+    .burger{
+        display: none;
+    }
+    .header-nav{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 5rem;
+    }
+    .header-nav ul{
+        display: flex;
+        font-size: 2rem;
+    }
+    .header-nav ul li{
+        margin: auto 2rem;
+    }
+    .header-nav i{
+        font-size: 3rem;
+        padding: auto 3rem;
+    }
+}
+
+/* ==========================================================================
+  NEVEZFAMILY
+  ========================================================================== */
+
+.nevezfamily-main{
+    margin: 5rem auto;
+    max-width: 90%;
+    background-color: var(--main-color-transparent);
+    margin: 3rem auto;
+    border-radius: 2rem;
+    padding-bottom:2rem;
+    color: #fff;
+}
+
+.nevezouzs-orange{
+    color: var(--third-color);
+}
+
+.nevezfamily-videos{
+    margin: 8rem 3rem;
+}
+
+.nevezfamily-gallery {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nevezfamily-gallery-item {
+    display: block;
+    margin: auto;
+    max-width: 60%;
+    order: 2;
+}
+.nevezfamily-gallery-button {
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--third-color);
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+}
+.nevezfamily-button-left:hover{
+    cursor: pointer;
+    transform: translateX(-5px);
+}
+.nevezfamily-button-right:hover{
+    cursor: pointer;
+    transform: translateX(5px);
+}
+.nevezfamily-button-left {
+    order: 1;
+}
+.nevezfamily-button-right {
+    order:3;
+}
+
+.nevezouzs-pseudo{
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nevezfamily-main h1{
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.nevezfamily-main h2{
+    text-align: center;
+    color:#fff;
+    padding: 1rem;
+}
+
+.nevezouzs-card{
+    padding: 1rem;
+    display: flex;
+    max-width: 400px;
+    border-radius: 2rem;
+    background-color: #0000004f;
+    margin: 2rem;
+}
+
+.nevezouzs-card-img{
+    margin-right: 1rem;
+}
+
+.nevezouzs-pseudo{
+    font-size: 1.8rem;  
+}
+
+@media screen and (min-width:1200px){
+    .nevezouzs-wrapper{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 60%;
+        margin: auto;
+    }
+}
+
+/* ==========================================================================
+  PAGE CONTACT
+  ========================================================================== */
+
+.main-contact{
+    margin: 5rem auto;
+}
+
+/*Formulaire de contact et formulaire Newsletter*/
+.main-contact h1{
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.contacter, .newsletter{
+    background-color: var(--main-color-transparent);
+    max-width: 90%;
+    margin: 3rem auto;
+    border-radius: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main-contact-forms{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-contacter fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-contact-forms .field input, .form-contacter textarea{
+    border: .5rem solid var(--secondary-color);
+    width: 30rem;
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    color: #fff;
+}
+
+.form-contacter textarea{
+    padding-bottom: 5rem;
+}
+
+.main-contact-forms .field input:focus, .form-contacter textarea:focus{
+    outline: none;
+    border: #fff .6rem solid;
+}
+
+.contacter-button, .newsletter-button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    width: 30rem;
+    background-color: var(--third-color);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    color: #fff;
+    transition: transform 200ms ease-in;
+}
+
+.newsletter-button{
+    text-align: center;
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.contacter-button:hover, .newsletter-button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+/*****desktop version*****/
+@media screen and (min-width:1200px){
+    .main-contact{
+        margin: 10rem auto;
+    }
+    .contacter, .newsletter{
+        max-width: 1100px;
+        margin: 5rem auto;
+    }
+    .main-contact-forms{
+        width: 70%;
+        margin: auto;
+    }
+    .form-contacter fieldset{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-contacter .field input{
+        width: 35rem;
+    }
+    .main-contact-forms > .field{
+        width: 100%;
+    }
+    .main-contact-forms .field input, .form-contacter textarea{
+        padding: 1.5rem;
+        margin: 3rem auto;
+    }
+    .form-contacter #entreprise, .form-contacter #message{
+        width: 100%;
+    }
+    .form-newsletter #newsletter-mail{
+        width: 95%;
+    }
+    .newsletter-button{
+        padding: 1.5rem;
+        width: 5rem;
+    }
+    .form-newsletter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contacter-button{
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+  FOOTER
+  ========================================================================== */
+
+.page-footer{
+    background: var(--main-color-transparent);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+    align-items: center;
+}
+
+.page-footer img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.page-footer p{
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.page-footer a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.page-footer i{
+    font-size: 2.5rem;
+}
+
+.page-footer article{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+/*****desktop version*****/
+@media screen and (min-width:1200px){
+    .page-footer{
+        padding: 2rem 20rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-footer article{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .page-footer img{
+        width: 75px;
+        height: 75px;
+    }
+    .page-footer p, .page-footer i{
+        margin: 1rem;
+    }
+    .page-footer a{
+        font-size: 1.4rem;
+    }
+    .page-footer i{
+        font-size: 3rem;
+    }
+}

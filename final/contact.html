@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fabrice Montagne formations page contact">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c75c1791b5.js" crossorigin="anonymous"></script>
+    <title>Nevezide - contact</title>
+</head>
+<body>
+    <body>
+        <header class="page-header">
+            <a href="index.html"><img src="assets/img/logo.png" alt="logo Nevezide"></a>
+            <div class="burger js-burger">
+                <span class="burger1"></span>
+                <span class="burger2"></span>
+                <span class="burger3"></span>
+            </div>
+            <nav class="header-nav js-nav">
+                <ul class="header-ul">
+                    <li>Formations payantes</li>
+                    <li><a href="contenus-gratuits.html">Contenu gratuit</a></li>
+                    <li><a href="nevezfamily.html">La Nevezfamily</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-nav-fa">
+                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </div>
+            </nav>
+        </header>
+        <main class="main-contact">
+            <section class="contacter">
+                <h1>Me contacter</h1>
+                <form class="form-contacter main-contact-forms">
+                    <fieldset>
+                        <div class="field">
+                            <input type="text" id="name" name="nom" placeholder="Nom">
+                        </div>
+                        <div class="field">
+                            <input type="text" id="firstname" name="prénom" placeholder="Prénom">
+                        </div>
+                    </fieldset>
+                    <div class="field">
+                        <input type="text" id="entreprise" name="entreprise" placeholder="Entreprise">
+                    </div>
+                    <fieldset>
+                        <div class="field">
+                            <input type="email" id="mail" name="mail" placeholder="Mail">
+                        </div>
+                        <div class="field">
+                            <input type="tel" id="phone" name="téléphone" placeholder="Téléphone">
+                        </div>
+                    </fieldset>
+                    <div class="field">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+                    <button class="contacter-button js-contact-button">Envoyer</button>
+                </form>
+            </section>
+            <section class="newsletter">
+                <h1>S'abonner à ma newsletter</h1>
+                <form class="form-newsletter main-contact-forms">
+                    <div class="field">
+                        <input type="email" id="newsletter-mail" name="email" placeholder="Mail">
+                    </div>
+                    <button class="newsletter-button js-newsletter-button"><i class="fa-solid fa-check"></i></button>
+                </form>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <article class="page-footer-network">
+                <i class="fa-brands fa-linkedin"></i>
+                <p><a href="contact.html">S'abonner à ma newsletter</a></p>
+            </article>
+            <article class="page-footer-logo">
+                <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+            </article>
+            <article class="page-footer-legal">
+                <p><a href="#">Mentions légales</a></p>
+                <p><a href="#">RGPD</a></p>
+            </article>
+        </footer>
+        <script src="assets/js/home.js"></script>
+        <script src="assets/js/contact.js"></script>
+    </body>
+</body>
+</html>
